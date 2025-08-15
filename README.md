@@ -1,39 +1,38 @@
-# CYBER ETHIOPIA
+# 🛡️ Web Vulnerability Scanner
 
-*"CYBER ETHIOPIA"* – National Cybersecurity Awareness & Certification Platform
-## 📖 Overview
-CYBER ETHIOPIA is a nationwide initiative to strengthen cybersecurity awareness and readiness across Ethiopia.  
-It provides security training, examination, and certification for:
+A **full-stack**, **Docker-ready** web vulnerability scanner that combines **8 security scanning tools** into one unified system.  
+Built with **FastAPI** (backend) and **Next.js** (frontend), this project allows you to scan websites for vulnerabilities directly from your browser without root access.
 
-- General public
-- Students
-- Employees in all sectors
-- Higher governmental sectors
+## 📌 Features
 
-The platform also integrates INSA (Information Network Security Administration) news and alerts, with an offline SMS service for rural areas.
-## 🎯 Goals
-- Promote digital safety awareness for all Ethiopians.
-- Ensure new employees meet national cybersecurity standards before joining.
-- Issue trusted certificates recognized by INSA.
-- Deliver real-time cyber alerts to both online and offline communities.
-## 📌 Key Features
+ **8 Integrated Scanners**:
+  1. OpenVAS
+  2. Nuclei
+  3. OWASP ZAP
+  4. Nikto
+  5. testssl.sh
+  6. Nmap
+  7. Trivy
+  8. OWASP Dependency-Check
 
-### 1. Security Awareness Training
-- Level-based learning:
-  - Basic – Public & Students
-  - Intermediate – Employees
-  - Advanced – Governmental sectors
-- Interactive modules with quizzes and case studies.
+ **Frontend**: Next.js with interactive result cards.
+ **Backend**: FastAPI that orchestrates and parses scanner outputs.
+ **Docker Deployment**: Works locally or on free hosts (Railway, Render, Fly.io) without root access.
+ **No Manual Installations**: All scanner binaries are pre-bundled in Docker
+  ## 🚀 How It Works
 
-### 2. Examination & Certification
-- Online exam for job applicants and employees.
-- Automated evaluation.
-- INSA-approved certificates based on training levels.
+1. **Frontend (Next.js)**  
+   - User enters a target URL.  
+   - Sends a POST request to `/scan` endpoint.  
+   - Displays results in interactive cards.
 
-### 3. INSA News & Alerts Integration
-- Live updates from INSA.
-- Categorized alerts for better filtering.
+2. **Backend (FastAPI)**  
+   - Receives target URL.  
+   - Executes all scanners in `/scanners/` folder.  
+   - Parses outputs into JSON format.  
+   - Returns aggregated results to frontend.
 
-### 4. Offline SMS Service
-- Sends cyber alerts to rural areas without internet.
-- Supports two-way SMS for news requests.
+3. **Scanner Scripts**  
+   - Each scanner has its own script (e.g., `nuclei_scanner.py`).  
+   - Uses `subprocess` to run binaries located in `/binaries/`.  
+   - Output is parsed and returned as structured JSON.
