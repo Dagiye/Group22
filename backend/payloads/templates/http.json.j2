@@ -1,0 +1,9 @@
+{
+  "method": "{{ method | default('GET') }}",
+  "url": "{{ url }}",
+  "headers": {{ headers | tojson }},
+  "params": {{ params | tojson }},
+  "data": {{ data | tojson }},
+  "cookies": {{ cookies | tojson }},
+  "timeout": {{ timeout | default(10) }}
+}

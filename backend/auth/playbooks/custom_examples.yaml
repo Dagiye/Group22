@@ -1,0 +1,12 @@
+name: "Custom Web App Login"
+provider: "custom"
+login_url: "https://target-app.com/login"
+username_field: "username"
+password_field: "password"
+csrf_field: "csrf_token"
+submit_button: "login_btn"
+flow:
+  - fetch_login_page
+  - parse_csrf_token
+  - post_credentials
+  - check_auth_success

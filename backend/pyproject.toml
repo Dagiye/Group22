@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "webscanner-backend"
+version = "0.1.0"
+description = "Universal web application vulnerability scanner backend"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+uvicorn = "^0.25.0"
+pydantic = "^2.5.1"
+requests = "^2.32.0"
+httpx = "^0.26.0"
+websockets = "^11.0"
+pyyaml = "^7.0"
+jinja2 = "^3.1"
+pytest = "^8.0"
+
+[tool.poetry.dev-dependencies]
+black = "^24.0"
+isort = "^6.0"
+mypy = "^1.5"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"

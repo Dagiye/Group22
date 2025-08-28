@@ -1,0 +1,22 @@
+scan:
+  concurrency: 5                # Number of parallel requests
+  timeout: 10                   # HTTP request timeout in seconds
+  follow_redirects: true
+  max_depth: 3                  # Maximum crawl depth
+  user_agent: "WebScanner/1.0"
+  retries: 2
+
+detection:
+  passive: true
+  active: true
+  fuzzing: true
+  headers: true
+  cookies: true
+
+logging:
+  level: INFO
+  file: "webscanner.log"
+
+report:
+  output_dir: "reports/"
+  format: "json"

@@ -1,0 +1,13 @@
+name: "Okta OIDC Login"
+provider: "okta"
+client_id: "<CLIENT_ID>"
+client_secret: "<CLIENT_SECRET>"
+issuer: "https://<your-org>.okta.com/oauth2/default"
+authorize_url: "{{issuer}}/v1/authorize"
+token_url: "{{issuer}}/v1/token"
+redirect_uri: "https://your-scanner-callback.com/oauth/callback"
+login_flow:
+  - visit_authorize_url
+  - extract_code
+  - exchange_token
+  - validate_id_token

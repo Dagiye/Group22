@@ -1,0 +1,22 @@
+scan:
+  concurrency: 20
+  timeout: 5
+  follow_redirects: true
+  max_depth: 10
+  user_agent: "WebScanner-Aggressive/1.0"
+  retries: 5
+
+detection:
+  passive: true
+  active: true
+  fuzzing: true
+  headers: true
+  cookies: true
+
+logging:
+  level: DEBUG
+  file: "webscanner_aggressive.log"
+
+report:
+  output_dir: "reports/aggressive/"
+  format: "json"

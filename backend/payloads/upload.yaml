@@ -1,0 +1,9 @@
+bypass:
+  - "test.php;.jpg"
+  - "test.php%00.jpg"
+malicious_content:
+  - "<?php system($_GET['cmd']); ?>"
+  - "<script>alert('Upload XSS')</script>"
+allowed_extensions:
+  - "test.jpg"
+  - "test.png"

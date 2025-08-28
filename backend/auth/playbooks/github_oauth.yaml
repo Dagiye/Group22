@@ -1,0 +1,14 @@
+name: "GitHub OAuth2 Login"
+provider: "github"
+client_id: "<YOUR_CLIENT_ID>"
+client_secret: "<YOUR_CLIENT_SECRET>"
+authorize_url: "https://github.com/login/oauth/authorize"
+token_url: "https://github.com/login/oauth/access_token"
+scope:
+  - read:user
+  - repo
+redirect_uri: "https://your-scanner-callback.com/oauth/callback"
+login_flow:
+  - visit_authorize_url
+  - extract_code
+  - exchange_token
