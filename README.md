@@ -94,10 +94,12 @@ backend/services/firebase-service-account.json
 
 
 ## Run backend
+
 uvicorn backend.apps.api.main:app --reload --host 0.0.0.0 --port 8001
-### Frontend (Next.js)  
+
+## Run Frontends (Next.js)
 ```bash
-cd frontend
+cd frontends
 npm install
 npm run build
 npm run dev
