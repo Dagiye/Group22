@@ -87,10 +87,19 @@ python -m venv venv
 source venv/bin/activate   # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 
-# Run API
-uvicorn apps.api.main:app --reload
+### the following the files placed at telegram group
+backend/core/serviceAccountKey.json
+backend/core/firebase-service-account.json
+backend/services/firebase-service-account.json
+
+
+## Run backend
+uvicorn backend.apps.api.main:app --reload --host 0.0.0.0 --port 8001
 ### Frontend (Next.js)  
 ```bash
 cd frontend
 npm install
+npm run build
 npm run dev
+
+make sure node_modules created during npm install 
