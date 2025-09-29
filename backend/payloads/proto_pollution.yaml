@@ -1,0 +1,5 @@
+basic:
+  - '{"__proto__":{"polluted":"yes"}}'
+  - '{"constructor":{"prototype":{"polluted":"yes"}}}'
+nested:
+  - '{"user":{"__proto__":{"polluted":"nested"}}}'

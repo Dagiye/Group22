@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "123",
+        "type": "sqli",
+        "target": "/login",
+        "severity": "high",
+        "description": "SQL Injection possible",
+        "evidence": ["payload=' OR 1=1 --"],
+        "remediation": ""
+    },
+    {
+        "uuid": "124",
+        "type": "xss",
+        "target": "/search",
+        "severity": "medium",
+        "description": "Reflected XSS",
+        "evidence": ["<script>alert(1)</script>"],
+        "remediation": ""
+    }
+]

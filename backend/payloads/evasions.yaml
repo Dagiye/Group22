@@ -1,0 +1,6 @@
+encoding:
+  - "%27 OR %271%27=%271"
+  - "%3Cscript%3Ealert(1)%3C/script%3E"
+polyglot:
+  - "';!--\"<XSS>=&{()}"
+  - "' or 1=1#"

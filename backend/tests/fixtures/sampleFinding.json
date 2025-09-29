@@ -1,0 +1,9 @@
+{
+    "uuid": "999",
+    "type": "csrf",
+    "target": "/form",
+    "severity": "medium",
+    "description": "CSRF detected",
+    "evidence": ["Missing CSRF token"],
+    "remediation": ""
+}

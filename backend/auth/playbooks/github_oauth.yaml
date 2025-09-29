@@ -1,0 +1,15 @@
+# GitHub OAuth authentication playbook
+# Used to authenticate scanner sessions via GitHub OAuth2
+
+oauth:
+  provider: github
+  client_id: "{{GITHUB_CLIENT_ID}}"
+  client_secret: "{{GITHUB_CLIENT_SECRET}}"
+  authorize_url: "https://github.com/login/oauth/authorize"
+  token_url: "https://github.com/login/oauth/access_token"
+  redirect_uri: "{{REDIRECT_URI}}"
+  scopes:
+    - read:user
+    - repo
+  success_indicator: "access_token"
+  refresh_token: false

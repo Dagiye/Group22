@@ -1,0 +1,9 @@
+local_file:
+  - "file:///etc/passwd"
+  - "file:///proc/self/environ"
+internal:
+  - "http://127.0.0.1/"
+  - "http://localhost/admin"
+external:
+  - "http://attacker.com"
+  - "http://malicious.example.com"

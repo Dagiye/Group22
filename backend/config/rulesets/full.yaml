@@ -1,0 +1,50 @@
+xss:
+  enabled: true
+  types: ["reflected", "stored", "dom", "mutation", "svg_polyglot"]
+sqli:
+  enabled: true
+  types: ["basic", "time_based", "error_based", "blind"]
+nosqli:
+  enabled: true
+ldap_injection:
+  enabled: true
+xpath:
+  enabled: true
+ssti:
+  enabled: true
+cmdi:
+  enabled: true
+crlf:
+  enabled: true
+hpp:
+  enabled: true
+jsoni:
+  enabled: true
+ssrf:
+  enabled: true
+xxe:
+  enabled: true
+file_upload:
+  enabled: true
+lfi:
+  enabled: true
+rfi:
+  enabled: true
+traversal:
+  enabled: true
+auth_access:
+  enabled: true
+csrf:
+  enabled: true
+idor:
+  enabled: true
+priv_esc:
+  enabled: true
+logic:
+  enabled: true
+  types: ["replay", "race", "pricing"]
+advanced:
+  enabled: true
+  types: ["smuggling","host_header","cache_poison","cors","clickjacking","websocket","proto_pollution","css_injection"]
+graphql:
+  enabled: true
