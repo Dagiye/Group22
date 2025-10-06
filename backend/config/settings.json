@@ -1,7 +1,0 @@
-{
-  "app_name": "Vulnerability Scanner",
-  "version": "0.1.0",
-  "jwt_secret": "${JWT_SECRET}", 
-  "log_level": "INFO",
-  "database_url": "${DATABASE_URL}"
-}

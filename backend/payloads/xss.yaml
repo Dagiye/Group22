@@ -1,8 +1,0 @@
-reflected:
-  - "<script>alert('XSS')</script>"
-  - "<img src=x onerror=alert('XSS') />"
-dom_based:
-  - "javascript:alert('DOM XSS')"
-  - "<svg/onload=alert('DOM XSS')>"
-stored:
-  - "<textarea><script>alert('Stored XSS')</script></textarea>"
